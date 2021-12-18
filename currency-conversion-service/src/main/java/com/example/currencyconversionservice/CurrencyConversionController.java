@@ -28,7 +28,7 @@ public class CurrencyConversionController {
 		return new CurrencyConversion(10001L, from, to, 
 				quantity, currencyConversion.getConversionMultiple(),
 				quantity.multiply(currencyConversion.getConversionMultiple()), 
-				currencyConversion.getEnvironment());
+				currencyConversion.getEnvironment()+" Feign");
 	}
 	
 	@GetMapping("/from/{from}/to/{to}/quantity/{quantity}")
@@ -44,6 +44,6 @@ public class CurrencyConversionController {
 		return new CurrencyConversion(10001L, from, to, 
 				quantity, currencyConversion.getConversionMultiple(),
 				quantity.multiply(currencyConversion.getConversionMultiple()), 
-				currencyConversion.getEnvironment());
+				currencyConversion.getEnvironment()+" Rest Template");
 	}
 }
